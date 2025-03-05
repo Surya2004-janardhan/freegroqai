@@ -10,7 +10,7 @@ GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
 # Streamlit UI
-st.title("Groq-Powered Chatbot")
+st.title("Ask anything")
 user_input = st.text_input("Ask me anything:")
 
 if st.button("Send"):
