@@ -287,7 +287,7 @@ st.markdown("""
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
-st.title("💬 Ask anything)")
+st.title("💬 Ask anything:)")
 
 # Initialize message history
 if "messages" not in st.session_state:
@@ -303,7 +303,8 @@ user_input = st.chat_input("Type your message...")
 
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
-
+    with st.spinner("Thinking... 💭"):
+      
     # Send to Groq API
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
