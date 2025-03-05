@@ -12,7 +12,7 @@ client = Groq(api_key=GROQ_API_KEY)
 # Streamlit UI
 st.title("Ask anything")
 # st.title("Your App Title")  
-st.markdown("<small>Press send to generate a response</small>", unsafe_allow_html=True)
+st.markdown("<small>Press send to generate response</small>", unsafe_allow_html=True)
 
 # st.subheader("Press send to generate a response")
 
