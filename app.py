@@ -11,7 +11,10 @@ client = Groq(api_key=GROQ_API_KEY)
 
 # Streamlit UI
 st.title("Ask anything")
-st.subheader("Press send to generate a response")
+# st.title("Your App Title")  
+st.markdown("<small>Press send to generate a response</small>", unsafe_allow_html=True)
+
+# st.subheader("Press send to generate a response")
 
 user_input = st.text_input("Ask me anything:")
 
