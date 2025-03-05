@@ -32,7 +32,7 @@ from groq import Groq
 GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
-st.title("Your App Title")
+st.title("Ask anything")
 st.markdown("<small>Press send to generate a response</small>", unsafe_allow_html=True)
 
 # Store messages in session state
@@ -53,7 +53,7 @@ if st.button("Send") and user_input:
 
     # Get response from the model
     response = client.chat.completions.create(
-        model="llama3-8b", 
+        model="llama-3.3-70b-versatile", 
         messages=[{"role": "user", "content": user_input}]
     )
 
