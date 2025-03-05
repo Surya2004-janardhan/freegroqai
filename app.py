@@ -11,6 +11,8 @@ client = Groq(api_key=GROQ_API_KEY)
 
 # Streamlit UI
 st.title("Ask anything")
+st.subheader("Press send to generate a response")
+
 user_input = st.text_input("Ask me anything:")
 
 if st.button("Send"):
