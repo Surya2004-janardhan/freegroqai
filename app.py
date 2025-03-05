@@ -127,7 +127,7 @@ import streamlit as st
 from groq import Groq
 
 # Set API Key
-GROQ_API_KEY = st.secrets["API_KEY"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
 st.title("Your Chat App")
