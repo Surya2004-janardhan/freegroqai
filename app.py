@@ -58,7 +58,8 @@ if st.button("Send") and user_input:
     )
 
     # Append response to message history
-    bot_response = response.choices[0].message["content"]
+    bot_response = response.choices[0].message.content
+    
     st.session_state.messages.append({"role": "assistant", "content": bot_response})
 
     # Clear input box
